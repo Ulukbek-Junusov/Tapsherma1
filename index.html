@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сатуу Менеджер Курсу</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    background:#f0f2f5;
+    color:#333;
+}
+header {
+    background:#4caf50;
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+    font-size:24px;
+    font-weight:bold;
+}
+.container {
+    max-width:900px;
+    margin:20px auto;
+    padding:0 10px;
+}
+.card {
+    background:white;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition: all 0.3s ease;
+}
+.card-header {
+    padding:18px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#e8f5e9;
+}
+.card-header i {
+    font-style: normal;
+    font-weight: bold;
+    font-size:20px;
+    transition: transform 0.3s ease;
+}
+.card-content {
+    padding:15px 18px;
+    display:none;
+    border-top:1px solid #ddd;
+}
+ul {
+    padding-left:20px;
+}
+li {
+    margin-bottom:10px;
+}
+footer {
+    text-align:center;
+    padding:20px;
+    background:#e0e0e0;
+    margin-top:20px;
+    font-size:14px;
+}
+@media (max-width:600px){
+    header {
+        font-size:20px;
+    }
+    .card-header {
+        font-size:16px;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+Сатуу Менеджер Курсу  <br> Биринчи тапшырма
+</header>
+
+<div class="container">
+
+<div class="card">
+    <div class="card-header">📚 Курстун баалуулуктары <i>+</i></div>
+    <div class="card-content">
+        <ul>
+            <li>Теориялык негиздер: Сатуу психологиясын үйрөнүү</li>
+            <li>Практикалык көндүмдөр: телефон жана бетме-бет сатуу, объекциялар менен иштөө, сүйлөшүү жана келишим түзүү</li>
+            <li>Жеке өнүгүү: ишенимдүү сүйлөө, убакыт жана энергия башкаруу, стресске туруштук берүү</li>
+            <li>Бизнес аспектиси: план түзүү, команда менен иштөө</li>
+            <li>Кардар менен узак мамиле куруу: лоялдуулук, кайра сатып алуулар, репутацияны башкаруу</li>
+            <li>Натыйжа: киреше жана сатуу көлөмүн өсүрүү, кардарларды кармап калуу, карьералык өсүү</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">💪 Менин идентивдүүлүгүм <i>+</i></div>
+    <div class="card-content">
+        <ul>
+            <li>Кардардын көйгөйүн чечкен адисмин</li>
+            <li>Компаниянын жүзүн көрсөткөн өкүлмүн</li>
+            <li>Ишеним жаратып, сүйлөшүүнү келишимге айлантам</li>
+            <li>"Жокту" мүмкүнчүлүккө айлантам</li>
+            <li>Кардарга баалуулук, компанияга киреше, өзүмө өсүү-өнүгүү алып келем 💪</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">🌟 Бермет Мамытованын баалуулуктары <i>+</i></div>
+    <div class="card-content">
+        <ul>
+            <li>Өсүү – талыкпай өзүн жана кесиптик деңгээлин жогорулатуу</li>
+            <li>Жоопкерчилик – команда, кардар жана максат алдында жооптуу болуу</li>
+            <li>Натыйжа – конкреттүү сандар жана жыйынтыктар менен иштөө</li>
+            <li>Шүгүр – жетишкендикти баалоо жана руханий негизди сактоо</li>
+            <li>Шыктандыруу – башкаларга дем берүү жана аракетке чакыруу</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">⚠ Өзүмдүн кемчилигим <i>+</i></div>
+    <div class="card-content">
+        <p>Адамдар менен тил табышым кыйын</p>
+    </div>
+</div>
+
+</div>
+
+<footer>
+"Сатуу Магиясы" Курсу &copy; 2025
+</footer>
+
+<script>
+// Аккордеон жана иконка багытын өзгөртүү
+const headers = document.querySelectorAll('.card-header');
+headers.forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const icon = header.querySelector('i');
+        if(content.style.display === 'block'){
+            content.style.display = 'none';
+            icon.textContent = '+';
+        } else {
+            content.style.display = 'block';
+            icon.textContent = '−';
+        }
+    });
+});
+</script>
+
+</body>
+</html>
